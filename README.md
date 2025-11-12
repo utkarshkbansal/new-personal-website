@@ -1,30 +1,61 @@
-# Website builder
+Utkarsh Bansal - Personal Portfolio
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+This is the source code for my personal portfolio website, built to showcase my projects, skills, and professional experience.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/utkarsh-bansals-projects/v0-website-builder)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/fvRxe153KQZ)
+Visit the live site: ubansal.vercel.app
 
-## Overview
+About This Project
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+This repository contains all the code for my personal site. It's built with modern web technologies to be fast, responsive, and easy to maintain. I use it as a central hub to direct people to my work, writing, and social profiles.
 
-## Deployment
+Features
 
-Your project is live at:
+Fully Responsive: Designed with a mobile-first approach to look great on all devices, from phones to desktops.
 
-**[https://vercel.com/utkarsh-bansals-projects/v0-website-builder](https://vercel.com/utkarsh-bansals-projects/v0-website-builder)**
+Optimized Performance: Built with Next.js for fast load times and optimized image handling.
 
-## Build your app
+Project Showcase: A clean and modern interface to display my featured projects.
 
-Continue building your app on:
+About Me: A dedicated section to share my professional background, skills, and interests.
 
-**[https://v0.app/chat/fvRxe153KQZ](https://v0.app/chat/fvRxe153KQZ)**
+Tech Stack
 
-## How It Works
+This project was built using the following technologies:
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Framework: Next.js (App Router)
+
+Language: TypeScript
+
+Styling: Tailwind CSS
+
+Package Manager: pnpm
+
+Deployment: Vercel
+
+Getting Started
+
+To run a local copy of this project:
+
+Clone the repository:
+
+git clone [https://github.com/utkarshkbansal/new-personal-website.git](https://github.com/utkarshkbansal/new-personal-website.git)
+cd new-personal-website
+
+
+Install dependencies:
+(This project uses pnpm. You can install it with npm i -g pnpm)
+
+pnpm install
+
+
+Run the development server:
+
+pnpm run dev
+
+
+Open your browser:
+Navigate to http://localhost:3000 to see the site in action.
+
+License
+
+This project is open-source and available under the MIT License.
