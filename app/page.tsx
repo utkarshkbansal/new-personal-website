@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Github as GitHub, Linkedin, Mail, Download } from "lucide-react"
+import { Menu, X, Github as GitHub, Linkedin, Mail, FileText } from "lucide-react"
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   const openResume = () => {
-    window.open("https://drive.google.com/file/d/1FnWcjg6Fr_Y8KVNkKF1YeDlpvkv8gVBj/view?usp=sharing", "_blank")
+    window.open("https://drive.google.com/file/d/1DdazOWjKKWHr4sYFKOV0CMXNPsURFLq6/view?usp=sharing", "_blank")
   }
 
   return (
@@ -55,7 +55,7 @@ export default function Home() {
               onClick={openResume}
               className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md text-sm hover:opacity-90 transition"
             >
-              <Download size={16} />
+              <FileText size={16} />
               Resume
             </button>
             <a
@@ -110,7 +110,7 @@ export default function Home() {
                 onClick={openResume}
                 className="flex items-center gap-2 w-full px-4 py-2 bg-secondary text-secondary-foreground rounded-md text-sm hover:opacity-90 transition"
               >
-                <Download size={16} />
+                <FileText size={16} />
                 Resume
               </button>
               <a
