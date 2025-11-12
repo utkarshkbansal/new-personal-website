@@ -1,61 +1,53 @@
-Utkarsh Bansal - Personal Portfolio
+# Utkarsh Bansal — Personal Portfolio
 
-This is the source code for my personal portfolio website, built to showcase my projects, skills, and professional experience.
+This repository contains the source code for my personal portfolio website, built to showcase my projects, skills, and professional experience.
 
-Visit the live site: ubansal.vercel.app
+**Live Site:** [ubansal.vercel.app](https://ubansal.vercel.app)
 
-About This Project
+---
 
-This repository contains all the code for my personal site. It's built with modern web technologies to be fast, responsive, and easy to maintain. I use it as a central hub to direct people to my work, writing, and social profiles.
+## About This Project
 
-Features
+This portfolio serves as a central hub for my professional presence — featuring my work, writing, and social profiles.  
+It’s built with modern web technologies to be fast, responsive, and easy to maintain.
 
-Fully Responsive: Designed with a mobile-first approach to look great on all devices, from phones to desktops.
+### Key Features
 
-Optimized Performance: Built with Next.js for fast load times and optimized image handling.
+- **Fully Responsive:** Built with a mobile-first approach to look great on all devices.  
+- **Optimized Performance:** Powered by Next.js for fast load times and optimized images.  
+- **Project Showcase:** Clean, modern interface to highlight my featured projects.  
+- **About Me:** Dedicated section to share my background, skills, and interests.  
+- **Deployed on Vercel:** Ensuring smooth CI/CD and global performance.
 
-Project Showcase: A clean and modern interface to display my featured projects.
+---
 
-About Me: A dedicated section to share my professional background, skills, and interests.
+## Tech Stack
 
-Tech Stack
+| Category | Technology |
+|-----------|-------------|
+| **Framework** | [Next.js (App Router)](https://nextjs.org/) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Package Manager** | [pnpm](https://pnpm.io/) |
+| **Deployment** | [Vercel](https://vercel.com/) |
 
-This project was built using the following technologies:
+---
 
-Framework: Next.js (App Router)
+## Getting Started
 
-Language: TypeScript
+Follow these steps to run a local copy of the project:
 
-Styling: Tailwind CSS
-
-Package Manager: pnpm
-
-Deployment: Vercel
-
-Getting Started
-
-To run a local copy of this project:
-
-Clone the repository:
-
-git clone [https://github.com/utkarshkbansal/new-personal-website.git](https://github.com/utkarshkbansal/new-personal-website.git)
+```bash
+# 1. Clone the repository
+git clone https://github.com/utkarshkbansal/new-personal-website.git
 cd new-personal-website
 
-
-Install dependencies:
-(This project uses pnpm. You can install it with npm i -g pnpm)
-
+# 2. Install dependencies (requires pnpm)
+# If you don’t have pnpm installed, run: npm install -g pnpm
 pnpm install
 
-
-Run the development server:
-
+# 3. Run the development server
 pnpm run dev
 
-
-Open your browser:
-Navigate to http://localhost:3000 to see the site in action.
-
-License
-
-This project is open-source and available under the MIT License.
+# 4. Open your browser and navigate to:
+# http://localhost:3000
