@@ -8,9 +8,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Utkarsh K. Bansal - CS Student & AI/ML Engineer",
+  title: "Utkarsh K. Bansal - CS Student @ Georgia Tech",
   description:
-    "Portfolio of Utkarsh K. Bansal, Georgia Tech CS student specializing in AI/ML, software security, and full-stack development.",
+    "Personal Website of Utkarsh Bansal, Georgia Tech CS student specializing in AI/ML, software engineering, security, and full-stack development.",
   generator: "v0.app",
 }
 
