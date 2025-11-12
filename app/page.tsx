@@ -23,6 +23,44 @@ export default function Home() {
     window.open("https://drive.google.com/file/d/1DdazOWjKKWHr4sYFKOV0CMXNPsURFLq6/view?usp=sharing", "_blank")
   }
 
+  const experiences = [
+    {
+      title: "AI/ML Research Assistant",
+      company: "Georgia Tech Design Innovation & Computational Engineering Lab",
+      period: "December 2023 - Present",
+      logo: "/gatech-research-logo.png",
+      color: "border-primary",
+      points: [
+        "Conducting research on computational analysis of thermal heat exchangers using topology optimization",
+        "Developing CNN in PyTorch/TensorFlow on PACE Cluster for thermal system simulations",
+        "Presented project methodology at UROP 2025",
+      ],
+    },
+    {
+      title: "Software Security Engineer Intern",
+      company: "Datadog",
+      period: "May 2025 - August 2025",
+      logo: "https://www.datadoghq.com/favicon.ico",
+      color: "border-accent",
+      points: [
+        "Engineered event-driven incident response system in Python on AWS Lambda",
+        "Reduced incident containment time to 30 seconds, enhancing SaaS security",
+        "Designed modular architecture with IAM-bound CI/CD pipelines, reducing onboarding time by 65%",
+      ],
+    },
+    {
+      title: "Software Engineer Intern",
+      company: "General Dynamics Information Technology",
+      period: "June 2024 - August 2024",
+      logo: "/gdit-logo.png",
+      color: "border-secondary",
+      points: [
+        "Developed inventory management scripts for 450,000+ CVE detection",
+        "Engineered dual Windows-Linux environment, reducing attack surfaces by 12%",
+      ],
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
@@ -58,12 +96,12 @@ export default function Home() {
               <FileText size={16} />
               Resume
             </button>
-            <a
-              href="mailto:utkarshbansal85@gmail.com"
+            <button
+              onClick={() => (window.location.href = "mailto:utkarshbansal85@gmail.com")}
               className="px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm hover:opacity-90 transition"
             >
               Contact
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -113,12 +151,12 @@ export default function Home() {
                 <FileText size={16} />
                 Resume
               </button>
-              <a
-                href="mailto:utkarshbansal85@gmail.com"
+              <button
+                onClick={() => (window.location.href = "mailto:utkarshbansal85@gmail.com")}
                 className="block w-full px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm hover:opacity-90 transition text-center"
               >
                 Contact
-              </a>
+              </button>
             </div>
           </div>
         )}
@@ -135,7 +173,7 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Georgia Tech Computer Science student with a focus on AI/ML and software + security engineering . I'm passionate about
+                Georgia Tech Computer Science student with a focus on AI/ML and software security. I'm passionate about
                 building intelligent systems that solve real-world problems, from conducting cutting-edge AI research to
                 engineering secure, scalable applications. With experience at industry leaders like Datadog and General
                 Dynamics, I blend academic rigor with practical software engineering to create impactful solutions.
@@ -158,12 +196,12 @@ export default function Home() {
                 >
                   <GitHub size={20} />
                 </a>
-                <a
-                  href="mailto:utkarshbansal85@gmail.com"
+                <button
+                  onClick={() => (window.location.href = "mailto:utkarshbansal85@gmail.com")}
                   className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
                 >
                   <Mail size={20} />
-                </a>
+                </button>
               </div>
             </div>
 
@@ -204,43 +242,28 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-12">Experience</h2>
 
           <div className="space-y-8">
-            {/* AI/ML Research */}
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-2xl font-bold">AI/ML Research Assistant</h3>
-              <p className="text-sm text-muted-foreground">
-                Georgia Tech Design Innovation & Computational Engineering Lab • December 2023 - Present
-              </p>
-              <ul className="mt-3 space-y-2 text-muted-foreground">
-                <li>
-                  • Conducting research on computational analysis of thermal heat exchangers using topology optimization
-                </li>
-                <li>• Developing CNN in PyTorch/TensorFlow on PACE Cluster for thermal system simulations</li>
-                <li>• Presented project methodology at UROP 2025</li>
-              </ul>
-            </div>
-
-            {/* Datadog Internship */}
-            <div className="border-l-4 border-accent pl-6">
-              <h3 className="text-2xl font-bold">Software Security Engineer Intern</h3>
-              <p className="text-sm text-muted-foreground">Datadog • May 2025 - August 2025</p>
-              <ul className="mt-3 space-y-2 text-muted-foreground">
-                <li>• Engineered event-driven incident response system in Python on AWS Lambda</li>
-                <li>• Reduced incident containment time to 30 seconds, enhancing SaaS security</li>
-                <li>• Designed modular architecture with IAM-bound CI/CD pipelines, reducing onboarding time by 65%</li>
-              </ul>
-            </div>
-
-            {/* General Dynamics Internship */}
-            <div className="border-l-4 border-secondary pl-6">
-              <h3 className="text-2xl font-bold">Software Engineer Intern</h3>
-              <p className="text-sm text-muted-foreground">
-                General Dynamics Information Technology • June 2024 - August 2024
-              </p>
-              <ul className="mt-3 space-y-2 text-muted-foreground">
-                <li>• Developed inventory management scripts for 450,000+ CVE detection</li>
-                <li>• Engineered dual Windows-Linux environment, reducing attack surfaces by 12%</li>
-              </ul>
-            </div>
+            {experiences.map((exp, index) => (
+              <div key={index} className={`border-l-4 ${exp.color} pl-6 flex gap-6`}>
+                <div className="flex-shrink-0">
+                  <img
+                    src={exp.logo || "/placeholder.svg"}
+                    alt={exp.company}
+                    className="w-16 h-16 rounded-lg object-cover bg-white/10 p-2"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-bold">{exp.title}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {exp.company} • {exp.period}
+                  </p>
+                  <ul className="mt-3 space-y-2 text-muted-foreground">
+                    {exp.points.map((point, i) => (
+                      <li key={i}>• {point}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -278,7 +301,7 @@ export default function Home() {
               <p className="text-sm text-muted-foreground mb-4">Published Research</p>
               <ul className="space-y-2 text-muted-foreground mb-4">
                 <li>• Published quantitative findings on Bitcoin criteria in SSRN Academic Journal</li>
-                <li>• Ranked in Top 10 of its category for 9 consecutive weeks, cited by 2 journals</li>
+                <li>• Ranked in Top 10 of its category for 9 consecutive weeks</li>
               </ul>
               <div className="pt-4">
                 <a
@@ -423,7 +446,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-accent mb-4">Frameworks & Libraries</h3>
               <div className="flex flex-wrap gap-2">
-                {["PyTorch", "TensorFlow", "React", "FastAPI", "Flask", "Scikit-learn", "JavaFX", "OpenCV", "Pandas", "NumPy", "OpenFOAM"].map((skill) => (
+                {["PyTorch", "TensorFlow", "React", "FastAPI", "Flask", "Scikit-learn", "JavaFX"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">
                     {skill}
                   </span>
@@ -434,7 +457,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-secondary mb-4">Tools & Platforms</h3>
               <div className="flex flex-wrap gap-2">
-                {["AWS", "Docker", "Terraform", "Android Studio", "XCode", "Firebase", "PowerShell", "Git", "GitHub", "GitLab", "Linux", "Datadog", "MySQL", "Ubuntu", "Jupyter Notebook"].map((skill) => (
+                {["AWS", "Docker", "Terraform", "Firebase", "Git", "Linux", "Jupyter"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">
                     {skill}
                   </span>
@@ -453,14 +476,15 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed">
                 When I step away from the computer, I enjoy exploring diverse interests that keep me balanced and
                 inspired. I'm an avid weightlifter, always pushing my physical limits and maintaining discipline both in
-                the gym and in my professional work. I'm passionate about exploring new TV series like Suits and Breaking Bad, among many more.
+                the gym and in my professional work. I'm passionate about exploring new TV series and staying updated on
+                current entertainment trends.
               </p>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
                 I'm competitive by nature and enjoy playing basketball with friends and colleagues, which brings a
-                collaborative spirit to the court. Music is another passion of mine, I play guitar and love experimenting
-                with with R&B-inspired sounds and chord progressions. Beyond these hobbies, I'm deeply interested in quantitative
+                collaborative spirit to the court. Music is another passion of mine—I play guitar and love experimenting
+                with different genres and techniques. Beyond these hobbies, I'm deeply interested in quantitative
                 analysis, finance, and the intersection of technology with real-world impact.
               </p>
             </div>
