@@ -446,7 +446,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-accent mb-4">Frameworks & Libraries</h3>
               <div className="flex flex-wrap gap-2">
-                {["PyTorch", "TensorFlow", "React", "FastAPI", "Flask", "Scikit-learn", "JavaFX"].map((skill) => (
+                {["PyTorch", "TensorFlow", "React", "FastAPI", "Flask", "Scikit-learn", "JavaFX", "OpenCV", "Pandas", "NumPy", "OpenFOAM"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">
                     {skill}
                   </span>
@@ -457,7 +457,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-secondary mb-4">Tools & Platforms</h3>
               <div className="flex flex-wrap gap-2">
-                {["AWS", "Docker", "Terraform", "Firebase", "Git", "Linux", "Jupyter"].map((skill) => (
+                {["AWS", "Docker", "Terraform", "Android Studio", "XCode", "Firebase", "PowerShell", "Git", "GitHub", "GitLab", "Linux", "Datadog", "MySQL", "Ubuntu", "Jupyter Notebook"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">
                     {skill}
                   </span>
@@ -474,18 +474,15 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                When I step away from the computer, I enjoy exploring diverse interests that keep me balanced and
+                When I step away from technology, I enjoy exploring diverse interests that keep me balanced and
                 inspired. I'm an avid weightlifter, always pushing my physical limits and maintaining discipline both in
-                the gym and in my professional work. I'm passionate about exploring new TV series and staying updated on
-                current entertainment trends.
+                the gym and in my professional work. I'm passionate about exploring new TV series and movies like Suits and Breaking Bad, among many more.
               </p>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                I'm competitive by nature and enjoy playing basketball with friends and colleagues, which brings a
-                collaborative spirit to the court. Music is another passion of mine—I play guitar and love experimenting
-                with different genres and techniques. Beyond these hobbies, I'm deeply interested in quantitative
-                analysis, finance, and the intersection of technology with real-world impact.
+                I'm competitive by nature and enjoy playing basketball and flag football with my friends. Music is another passion of mine, as I play guitar and love experimenting
+                with R&B-inspired sounds and chord progressions. Beyond these hobbies, I'm deeply interested in quantitative analysis, finance, and the intersection of technology with societal issues.
               </p>
             </div>
           </div>
