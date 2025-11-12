@@ -135,7 +135,7 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Georgia Tech Computer Science student with a focus on AI/ML and software security. I'm passionate about
+                Georgia Tech Computer Science student with a focus on AI/ML and software + security engineering . I'm passionate about
                 building intelligent systems that solve real-world problems, from conducting cutting-edge AI research to
                 engineering secure, scalable applications. With experience at industry leaders like Datadog and General
                 Dynamics, I blend academic rigor with practical software engineering to create impactful solutions.
@@ -278,7 +278,7 @@ export default function Home() {
               <p className="text-sm text-muted-foreground mb-4">Published Research</p>
               <ul className="space-y-2 text-muted-foreground mb-4">
                 <li>• Published quantitative findings on Bitcoin criteria in SSRN Academic Journal</li>
-                <li>• Ranked in Top 10 of its category for 9 consecutive weeks</li>
+                <li>• Ranked in Top 10 of its category for 9 consecutive weeks, cited by 2 journals</li>
               </ul>
               <div className="pt-4">
                 <a
@@ -423,7 +423,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-accent mb-4">Frameworks & Libraries</h3>
               <div className="flex flex-wrap gap-2">
-                {["PyTorch", "TensorFlow", "React", "FastAPI", "Flask", "Scikit-learn", "JavaFX"].map((skill) => (
+                {["PyTorch", "TensorFlow", "React", "FastAPI", "Flask", "Scikit-learn", "JavaFX", "OpenCV", "Pandas", "NumPy", "OpenFOAM"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">
                     {skill}
                   </span>
@@ -434,7 +434,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-secondary mb-4">Tools & Platforms</h3>
               <div className="flex flex-wrap gap-2">
-                {["AWS", "Docker", "Terraform", "Firebase", "Git", "Linux", "Jupyter"].map((skill) => (
+                {["AWS", "Docker", "Terraform", "Android Studio", "XCode", "Firebase", "PowerShell", "Git", "GitHub", "GitLab", "Linux", "Datadog", "MySQL", "Ubuntu", "Jupyter Notebook"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">
                     {skill}
                   </span>
@@ -453,15 +453,14 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed">
                 When I step away from the computer, I enjoy exploring diverse interests that keep me balanced and
                 inspired. I'm an avid weightlifter, always pushing my physical limits and maintaining discipline both in
-                the gym and in my professional work. I'm passionate about exploring new TV series and staying updated on
-                current entertainment trends.
+                the gym and in my professional work. I'm passionate about exploring new TV series like Suits and Breaking Bad, among many more.
               </p>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
                 I'm competitive by nature and enjoy playing basketball with friends and colleagues, which brings a
-                collaborative spirit to the court. Music is another passion of mine—I play guitar and love experimenting
-                with different genres and techniques. Beyond these hobbies, I'm deeply interested in quantitative
+                collaborative spirit to the court. Music is another passion of mine, I play guitar and love experimenting
+                with with R&B-inspired sounds and chord progressions. Beyond these hobbies, I'm deeply interested in quantitative
                 analysis, finance, and the intersection of technology with real-world impact.
               </p>
             </div>
