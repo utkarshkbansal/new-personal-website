@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Github as GitHub, Linkedin, Mail, ArrowRight, Download } from "lucide-react"
+import { Menu, X, Github as GitHub, Linkedin, Mail, Download } from "lucide-react"
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -19,71 +19,9 @@ export default function Home() {
     element?.scrollIntoView({ behavior: "smooth" })
   }
 
-  // Function to generate and download resume as PDF
-  const downloadResume = () => {
-    const resumeContent = `UTKARSH K. BANSAL
-703-687-2857 | utkarshbansal85@gmail.com | linkedin.com/in/utkarshkbansal | https://utkarshkbansal.me
-
-EDUCATION
-Georgia Institute of Technology, Atlanta, GA
-B.S. in Computer Science, AI and Networking Threads | Graduating May 2027
-Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Systems, 
-Computer Networks, Computer Vision, Machine Learning, Linear Algebra
-
-EXPERIENCE
-AI/ML Research Assistant
-Georgia Tech Design Innovation & Computational Engineering Lab, Atlanta, GA | December 2023 – Present
-• Conducting research on computational analysis & design of cross-flow thermal heat exchangers using topology optimization
-• Leveraging PyTorch, TensorFlow, OpenFOAM, & C++ to develop CNN within PACE Cluster for thermal system simulations
-• Presented project methodology with findings at UROP 2025
-
-Software Security Engineer Intern
-Datadog, New York, NY | May 2025 – August 2025
-• Engineered event-driven incident response system in Python on AWS Lambda, provisioned with Terraform
-• Integrated with Datadog workflows, reducing incident containment time to 30 seconds
-• Designed modular architecture with IAM-bound CI/CD pipelines, reducing onboarding time by 65%
-
-Software Engineer Intern
-General Dynamics Information Technology, Springfield, VA | June 2024 – August 2024
-• Developed Python scripts to inventory installed software across enterprise endpoints, cross-referencing 450,000+ CVEs
-• Engineered dual Windows-Linux environment using Ubuntu & WSL, reducing attack surfaces by 12%
-
-PROJECTS
-WrappedSync | Java, Kotlin, Android Studio, Firebase, LLMs | January 2025 – May 2025
-• Built Spotify Wrapped-style Android app with LLM-based natural language analysis, 150+ active users
-• Designed OAuth2-based authentication with Firebase & Google Sign-in
-
-BuzzPlanner | Android Studio, Java, Kotlin, Python, Firebase | August 2024 – January 2025
-• Led development of full-stack Android scheduling platform used by 500+ Georgia Tech students
-• Implemented custom conflict detection algorithm, reducing errors by 40%
-
-Stock Screener & Sentiment Analysis | Python, FinBERT, Financial ML | May 2024 – August 2024
-• Engineered stock screener filtering 500+ stocks daily using Python, Pandas, NumPy, finvizfinance
-• Integrated AI-driven sentiment analysis using FinBERT on 1,000+ financial articles per week
-
-NLP Sign-Language Classification | Python, NLP, OpenCV, Machine Learning | October 2023 – Present
-• Leading development of ML model for seamless interaction between deaf and non-sign language users
-• Achieved 35% improvement in prototype accuracy with real-time processing
-
-TECHNICAL SKILLS
-Languages: Java, Python, C++, C, HTML/CSS, JavaScript, Kotlin, SQL
-Frameworks: FastAPI, Flask, JavaFX, PyTorch, React, Scikit-learn, TensorFlow
-Tools: Agile, Android Studio, AWS, Datadog, Docker, Firebase, Git/GitHub, Linux, Terraform
-
-ACTIVITIES & LEADERSHIP
-Georgia Tech Big Data Big Impact | Senior Project Developer | January 2024 – Present
-• Leading NLP Sign-Language Classification project with team of developers
-
-Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September 2023 – Present
-• Implementing Gen-AI strategies for DC-BLOX data centers, projected 7% annual energy cost reduction`
-
-    const element = document.createElement("a")
-    element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(resumeContent))
-    element.setAttribute("download", "Utkarsh_Bansal_Resume.txt")
-    element.style.display = "none"
-    document.body.appendChild(element)
-    element.click()
-    document.body.removeChild(element)
+  // Function to open resume in new tab
+  const openResume = () => {
+    window.open("/resume", "_blank")
   }
 
   return (
@@ -102,9 +40,6 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
             <button onClick={() => scrollToSection("intro")} className="text-sm hover:text-primary transition">
               About
             </button>
-            <button onClick={() => scrollToSection("contact-info")} className="text-sm hover:text-primary transition">
-              Contact Info
-            </button>
             <button onClick={() => scrollToSection("experience")} className="text-sm hover:text-primary transition">
               Experience
             </button>
@@ -118,7 +53,7 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
               Skills
             </button>
             <button
-              onClick={downloadResume}
+              onClick={openResume}
               className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md text-sm hover:opacity-90 transition"
             >
               <Download size={16} />
@@ -149,12 +84,6 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
                 About
               </button>
               <button
-                onClick={() => scrollToSection("contact-info")}
-                className="block w-full text-left text-sm hover:text-primary transition"
-              >
-                Contact Info
-              </button>
-              <button
                 onClick={() => scrollToSection("experience")}
                 className="block w-full text-left text-sm hover:text-primary transition"
               >
@@ -179,7 +108,7 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
                 Skills
               </button>
               <button
-                onClick={downloadResume}
+                onClick={openResume}
                 className="flex items-center gap-2 w-full px-4 py-2 bg-secondary text-secondary-foreground rounded-md text-sm hover:opacity-90 transition"
               >
                 <Download size={16} />
@@ -198,76 +127,71 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
 
       {/* Hero Section */}
       <section id="intro" className="min-h-screen flex items-center justify-center pt-16 px-4">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">Utkarsh K. Bansal</h1>
-          </div>
-
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Georgia Tech Computer Science student with a focus on AI/ML and software security. I'm passionate about
-            building intelligent systems that solve real-world problems, from conducting cutting-edge AI research to
-            engineering secure, scalable applications. With experience at industry leaders like Datadog and General
-            Dynamics, I blend academic rigor with practical software engineering to create impactful solutions.
-          </p>
-
-          <div className="flex gap-4 justify-center pt-4">
-            <a
-              href="https://linkedin.com/in/utkarshkbansal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="https://github.com/utkarshkbansal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
-            >
-              <GitHub size={20} />
-            </a>
-            <a
-              href="mailto:utkarshbansal85@gmail.com"
-              className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
-            >
-              <Mail size={20} />
-            </a>
-          </div>
-
-          <button
-            onClick={() => scrollToSection("contact-info")}
-            className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:opacity-90 transition font-medium"
-          >
-            Explore My Work <ArrowRight size={18} />
-          </button>
-        </div>
-      </section>
-
-      <section id="contact-info" className="py-20 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="space-y-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div>
-                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Location</p>
-                <p className="text-lg font-medium">Atlanta, GA</p>
+        <div className="max-w-5xl mx-auto w-full">
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            {/* Left Side - Intro */}
+            <div className="md:col-span-2 space-y-6">
+              <div className="space-y-2">
+                <h1 className="text-5xl md:text-6xl font-bold tracking-tight">Utkarsh K. Bansal</h1>
               </div>
-              <div>
-                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Email</p>
-                <p className="text-lg font-medium">utkarshbansal85@gmail.com</p>
-              </div>
-              <div>
-                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Phone</p>
-                <a href="tel:703-687-2857" className="text-lg font-medium hover:text-primary transition">
-                  703-687-2857
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Georgia Tech Computer Science student with a focus on AI/ML and software security. I'm passionate about
+                building intelligent systems that solve real-world problems, from conducting cutting-edge AI research to
+                engineering secure, scalable applications. With experience at industry leaders like Datadog and General
+                Dynamics, I blend academic rigor with practical software engineering to create impactful solutions.
+              </p>
+
+              <div className="flex gap-4 pt-2">
+                <a
+                  href="https://linkedin.com/in/utkarshkbansal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
+                >
+                  <Linkedin size={20} />
+                </a>
+                <a
+                  href="https://github.com/utkarshkbansal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
+                >
+                  <GitHub size={20} />
+                </a>
+                <a
+                  href="mailto:utkarshbansal85@gmail.com"
+                  className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
+                >
+                  <Mail size={20} />
                 </a>
               </div>
-              <div>
-                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Currently</p>
-                <div className="space-y-1">
-                  <p className="text-sm font-medium">B.S. in Computer Science</p>
-                  <p className="text-xs text-muted-foreground">AI and Networking Threads</p>
-                  <p className="text-xs text-muted-foreground">Expected: May 2027</p>
+            </div>
+
+            {/* Right Side - Contact Info */}
+            <div className="md:col-span-1">
+              <div className="space-y-6">
+                <div>
+                  <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Location</p>
+                  <p className="text-sm font-medium">Atlanta, GA</p>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Email</p>
+                  <p className="text-sm font-medium">utkarshbansal85@gmail.com</p>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Phone</p>
+                  <a href="tel:703-687-2857" className="text-sm font-medium hover:text-primary transition">
+                    703-687-2857
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Currently</p>
+                  <div className="space-y-1">
+                    <p className="text-xs font-medium">B.S. in Computer Science</p>
+                    <p className="text-xs text-muted-foreground">AI and Networking Threads</p>
+                    <p className="text-xs text-muted-foreground">Expected: May 2027</p>
+                  </div>
                 </div>
               </div>
             </div>
