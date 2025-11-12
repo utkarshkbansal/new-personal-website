@@ -19,9 +19,8 @@ export default function Home() {
     element?.scrollIntoView({ behavior: "smooth" })
   }
 
-  // Function to open resume in new tab
   const openResume = () => {
-    window.open("/resume", "_blank")
+    window.open("https://drive.google.com/file/d/1FnWcjg6Fr_Y8KVNkKF1YeDlpvkv8gVBj/view?usp=sharing", "_blank")
   }
 
   return (
