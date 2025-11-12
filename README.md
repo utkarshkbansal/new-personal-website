@@ -50,4 +50,8 @@ pnpm install
 pnpm run dev
 
 # 4. Open your browser and navigate to:
-# http://localhost:3000
+# ubansal.vercel.app
+
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
