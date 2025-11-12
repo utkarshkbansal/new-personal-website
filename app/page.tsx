@@ -95,15 +95,21 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-          <div className="text-xl font-bold text-primary">UKB</div>
+          <div className="text-xl font-bold text-primary">Utkarsh B.</div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 items-center">
             <button onClick={() => scrollToSection("intro")} className="text-sm hover:text-primary transition">
               About
             </button>
+            <button onClick={() => scrollToSection("contact-info")} className="text-sm hover:text-primary transition">
+              Contact Info
+            </button>
             <button onClick={() => scrollToSection("experience")} className="text-sm hover:text-primary transition">
               Experience
+            </button>
+            <button onClick={() => scrollToSection("research")} className="text-sm hover:text-primary transition">
+              Research
             </button>
             <button onClick={() => scrollToSection("projects")} className="text-sm hover:text-primary transition">
               Projects
@@ -143,10 +149,22 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
                 About
               </button>
               <button
+                onClick={() => scrollToSection("contact-info")}
+                className="block w-full text-left text-sm hover:text-primary transition"
+              >
+                Contact Info
+              </button>
+              <button
                 onClick={() => scrollToSection("experience")}
                 className="block w-full text-left text-sm hover:text-primary transition"
               >
                 Experience
+              </button>
+              <button
+                onClick={() => scrollToSection("research")}
+                className="block w-full text-left text-sm hover:text-primary transition"
+              >
+                Research
               </button>
               <button
                 onClick={() => scrollToSection("projects")}
@@ -218,11 +236,42 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
           </div>
 
           <button
-            onClick={() => scrollToSection("experience")}
+            onClick={() => scrollToSection("contact-info")}
             className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:opacity-90 transition font-medium"
           >
             Explore My Work <ArrowRight size={18} />
           </button>
+        </div>
+      </section>
+
+      <section id="contact-info" className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="space-y-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div>
+                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Location</p>
+                <p className="text-lg font-medium">Atlanta, GA</p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Email</p>
+                <p className="text-lg font-medium">utkarshbansal85@gmail.com</p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Phone</p>
+                <a href="tel:703-687-2857" className="text-lg font-medium hover:text-primary transition">
+                  703-687-2857
+                </a>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Currently</p>
+                <div className="space-y-1">
+                  <p className="text-sm font-medium">B.S. in Computer Science</p>
+                  <p className="text-xs text-muted-foreground">AI and Networking Threads</p>
+                  <p className="text-xs text-muted-foreground">Expected: May 2027</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -273,79 +322,158 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
         </div>
       </section>
 
+      {/* Research Section */}
+      <section id="research" className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12">Research</h2>
+
+          <div className="space-y-8">
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-2">AI/ML Research - Thermal Heat Exchangers</h3>
+              <p className="text-sm text-muted-foreground mb-4">Georgia Tech DICE Lab • December 2023 - Present</p>
+              <ul className="space-y-2 text-muted-foreground mb-4">
+                <li>
+                  • Computational analysis & design of cross-flow thermal heat exchangers using topology optimization
+                </li>
+                <li>• Developing CNN with PyTorch/TensorFlow on PACE Cluster for thermal simulations</li>
+                <li>• Processing 15+ CFD features for accurate quantitative predictions</li>
+              </ul>
+              <div className="pt-4">
+                <a
+                  href="http://aaravtech.me/assets/work-samples/final-research-report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline text-sm"
+                >
+                  Read Report →
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-2">Quantitative Bitcoin Criterion</h3>
+              <p className="text-sm text-muted-foreground mb-4">Published Research</p>
+              <ul className="space-y-2 text-muted-foreground mb-4">
+                <li>• Published quantitative findings on Bitcoin criteria in SSRN Academic Journal</li>
+                <li>• Ranked in Top 10 of its category for 9 consecutive weeks</li>
+              </ul>
+              <div className="pt-4">
+                <a
+                  href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4261198"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline text-sm"
+                >
+                  Read Report →
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-2">Experiential Learning Research</h3>
+              <p className="text-sm text-muted-foreground mb-4">George Mason University</p>
+              <ul className="space-y-2 text-muted-foreground mb-4">
+                <li>• Collaborated with Dr. Sarah Wittman on quantifying impact of experiential learning styles</li>
+                <li>• Utilized statistical analysis tools and JavaScript for dataset analysis</li>
+              </ul>
+              <div className="pt-4">
+                <a
+                  href="https://www.authorea.com/doi/full/10.22541/au.166955644.49685019"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline text-sm"
+                >
+                  Read Report →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
+      <section id="projects" className="py-20 px-4 bg-card">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Featured Projects</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* WrappedSync */}
-            <div className="bg-card border border-border rounded-lg p-6 hover:border-primary transition">
+            <div className="bg-background border border-border rounded-lg p-6 hover:border-primary transition">
               <h3 className="text-xl font-bold mb-2">WrappedSync</h3>
               <p className="text-sm text-muted-foreground mb-4">Java • Kotlin • Android • Firebase • LLMs</p>
               <p className="text-muted-foreground mb-4">
                 Spotify Wrapped-style Android app generating personalized listening insights using LLM-based natural
                 language analysis. 150+ active users.
               </p>
-              <div className="flex gap-2 pt-4">
+              <div className="flex flex-wrap gap-2 pt-4">
                 <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">OAuth2</span>
                 <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">LLM</span>
+                <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">Mobile</span>
+                <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">Real-time</span>
               </div>
             </div>
 
             {/* BuzzPlanner */}
-            <div className="bg-card border border-border rounded-lg p-6 hover:border-accent transition">
+            <div className="bg-background border border-border rounded-lg p-6 hover:border-accent transition">
               <h3 className="text-xl font-bold mb-2">BuzzPlanner</h3>
               <p className="text-sm text-muted-foreground mb-4">Android • Java • Kotlin • Firebase</p>
               <p className="text-muted-foreground mb-4">
                 Full-stack Android scheduling platform used by 500+ Georgia Tech students. Custom conflict detection
                 algorithm improved accuracy by 40%.
               </p>
-              <div className="flex gap-2 pt-4">
-                <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Real-time</span>
+              <div className="flex flex-wrap gap-2 pt-4">
                 <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Algorithms</span>
+                <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Real-time</span>
+                <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Notifications</span>
+                <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Scale</span>
               </div>
             </div>
 
             {/* NLP Sign Language */}
-            <div className="bg-card border border-border rounded-lg p-6 hover:border-secondary transition">
+            <div className="bg-background border border-border rounded-lg p-6 hover:border-secondary transition">
               <h3 className="text-xl font-bold mb-2">NLP Sign-Language Classification</h3>
               <p className="text-sm text-muted-foreground mb-4">Python • NLP • OpenCV • Machine Learning</p>
               <p className="text-muted-foreground mb-4">
                 Leading development of ML model enabling seamless interactions between deaf and non-sign language users.
                 Improved accuracy by 20%.
               </p>
-              <div className="flex gap-2 pt-4">
+              <div className="flex flex-wrap gap-2 pt-4">
                 <span className="text-xs px-3 py-1 bg-secondary/10 text-secondary rounded-full">NLP</span>
                 <span className="text-xs px-3 py-1 bg-secondary/10 text-secondary rounded-full">Accessibility</span>
+                <span className="text-xs px-3 py-1 bg-secondary/10 text-secondary rounded-full">Computer Vision</span>
+                <span className="text-xs px-3 py-1 bg-secondary/10 text-secondary rounded-full">PyTorch</span>
               </div>
             </div>
 
             {/* AI Infrastructure */}
-            <div className="bg-card border border-border rounded-lg p-6 hover:border-primary transition">
+            <div className="bg-background border border-border rounded-lg p-6 hover:border-primary transition">
               <h3 className="text-xl font-bold mb-2">AI Infrastructure Optimization</h3>
               <p className="text-sm text-muted-foreground mb-4">Python • Machine Learning • Data Centers</p>
               <p className="text-muted-foreground mb-4">
                 Implementing Gen-AI strategies for data center optimization. ML workflows projected 7% annual reduction
                 in energy costs.
               </p>
-              <div className="flex gap-2 pt-4">
+              <div className="flex flex-wrap gap-2 pt-4">
                 <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">ML</span>
                 <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">Optimization</span>
+                <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">Sustainability</span>
+                <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">GenAI</span>
               </div>
             </div>
 
             {/* Stock Screener & Sentiment Analysis */}
-            <div className="bg-card border border-border rounded-lg p-6 hover:border-accent transition">
+            <div className="bg-background border border-border rounded-lg p-6 hover:border-accent transition">
               <h3 className="text-xl font-bold mb-2">Stock Screener & Sentiment Analysis</h3>
               <p className="text-sm text-muted-foreground mb-4">Python • FinBERT • Financial ML • NLP</p>
               <p className="text-muted-foreground mb-4">
                 Python-based tool to identify undervalued stocks and analyze sentiment from financial news articles
                 using pre-trained FinBERT model, providing data-driven insights for investors.
               </p>
-              <div className="flex gap-2 pt-4">
+              <div className="flex flex-wrap gap-2 pt-4">
                 <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">FinBERT</span>
                 <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Finance</span>
+                <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Sentiment Analysis</span>
+                <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Web Scraping</span>
               </div>
             </div>
           </div>
@@ -353,7 +481,7 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-card">
+      <section id="skills" className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Technical Skills</h2>
 
@@ -394,11 +522,31 @@ Georgia Tech Undergraduate Consulting Club | Senior Pro-Bono Analyst | September
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 px-4">
-        <div className="max-w-5xl mx-auto text-center text-muted-foreground">
-          <p>Built with Next.js • Designed for impact</p>
-          <p className="mt-2 text-sm">© 2025 Utkarsh K. Bansal. All rights reserved.</p>
+      <footer className="border-t border-border py-16 px-4 bg-card">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-2xl font-bold mb-8">Interests & Hobbies</h3>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <p className="text-muted-foreground leading-relaxed">
+                When I step away from the computer, I enjoy exploring diverse interests that keep me balanced and
+                inspired. I'm an avid weightlifter, always pushing my physical limits and maintaining discipline both in
+                the gym and in my professional work. I'm passionate about exploring new TV series and staying updated on
+                current entertainment trends.
+              </p>
+            </div>
+            <div>
+              <p className="text-muted-foreground leading-relaxed">
+                I'm competitive by nature and enjoy playing basketball with friends and colleagues, which brings a
+                collaborative spirit to the court. Music is another passion of mine—I play guitar and love experimenting
+                with different genres and techniques. Beyond these hobbies, I'm deeply interested in quantitative
+                analysis, finance, and the intersection of technology with real-world impact.
+              </p>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-border">
+            <p className="text-muted-foreground">Built with Next.js • Designed for impact</p>
+            <p className="mt-2 text-sm text-muted-foreground">© 2025 Utkarsh K. Bansal. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
