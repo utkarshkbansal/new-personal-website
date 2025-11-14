@@ -422,6 +422,23 @@ export default function Home() {
                 <span className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full">Web Scraping</span>
               </div>
             </div>
+
+            {/* My Personal Website */}
+            <div className="bg-background border border-border rounded-lg p-6 hover:border-primary transition">
+              <h3 className="text-xl font-bold mb-2">My Personal Website</h3>
+              <p className="text-sm text-muted-foreground mb-4">TypeScript • CSS • JavaScript • v0</p>
+              <p className="text-muted-foreground mb-4">
+                My responsive personal portfolio showcasing my projects and technical skills. 
+                Features a modern, layered UI design with interactive haptic feedback, 
+                built using TypeScript and accelerated by v0.
+              </p>
+              <div className="flex flex-wrap gap-2 pt-4">
+                <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">Design</span>
+                <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">Haptics</span>
+                <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">Layers</span>
+                <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">Vercel</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
