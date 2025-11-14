@@ -173,7 +173,7 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Georgia Tech Computer Science student with a focus on AI/ML and software security. I'm passionate about
+                Computer Science student @ Georgia Tech with a focus on AI/ML and software security. I'm passionate about
                 building intelligent systems that solve real-world problems, from conducting cutting-edge AI research to
                 engineering secure, scalable applications. With experience at industry leaders like Datadog and General
                 Dynamics, I blend academic rigor with practical software engineering to create impactful solutions.
@@ -226,8 +226,8 @@ export default function Home() {
                   <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Currently</p>
                   <div className="space-y-1">
                     <p className="text-xs font-medium">B.S. in Computer Science</p>
-                    <p className="text-xs text-muted-foreground">AI and Networking Threads</p>
-                    <p className="text-xs text-muted-foreground">Expected: May 2027</p>
+                    <p className="text-xs text-muted-foreground">A.I. and Networking Threads</p>
+                    <p className="text-xs text-muted-foreground">Expected Graduation: May 2027</p>
                   </div>
                 </div>
               </div>
@@ -452,7 +452,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-primary mb-4">Languages</h3>
               <div className="flex flex-wrap gap-2">
-                {["Java", "Python", "C++", "C", "JavaScript", "Kotlin", "SQL", "HTML/CSS"].map((skill) => (
+                {["Java", "Python", "C++", "C", "JavaScript", "Kotlin", "SQL", "HTML", "CSS"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
                     {skill}
                   </span>
@@ -474,7 +474,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-secondary mb-4">Tools & Platforms</h3>
               <div className="flex flex-wrap gap-2">
-                {["AWS", "Docker", "Terraform", "Android Studio", "XCode", "Firebase", "PowerShell", "Git", "GitHub", "GitLab", "Linux", "Datadog", "MySQL", "Ubuntu", "Jupyter Notebook"].map((skill) => (
+                {["AWS", "Docker", "Terraform", "Android Studio", "XCode", "Firebase", "PowerShell", "Git", "GitHub", "GitLab", "Linux", "Datadog", "MySQL", "Ubuntu", "Jupyter Notebook", "Google Colab", "MySQL"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">
                     {skill}
                   </span>
