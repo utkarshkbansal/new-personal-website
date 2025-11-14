@@ -196,12 +196,12 @@ export default function Home() {
                 >
                   <GitHub size={20} />
                 </a>
-                <button
-                  onClick={() => (window.location.href = "mailto:utkarshbansal85@gmail.com")}
+                <a
+                  href="mailto:utkarshbansal85@gmail.com"
                   className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
                 >
                   <Mail size={20} />
-                </button>
+                </a>
               </div>
             </div>
 
