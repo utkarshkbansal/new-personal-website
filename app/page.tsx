@@ -286,7 +286,7 @@ export default function Home() {
               </ul>
               <div className="pt-4">
                 <a
-                  href="http://aaravtech.me/assets/work-samples/final-research-report.pdf"
+                  href="https://drive.google.com/file/d/1llvqhmMk_VLEJbXgyQYaL5Z0Y66R3svi/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline text-sm"
