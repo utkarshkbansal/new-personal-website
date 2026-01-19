@@ -37,12 +37,13 @@ export default function Home() {
       ],
     },
     {
-      title: "Software Security Engineer Intern",
+      title: "Software Engineer Intern",
       company: "Datadog",
       period: "May 2025 - August 2025",
       logo: "https://www.datadoghq.com/favicon.ico",
       color: "border-accent",
       points: [
+        "Summer 2025 intern on the Enterprise Security team",
         "Engineered event-driven incident response system in Python on AWS Lambda",
         "Reduced incident containment time to 30 seconds, enhancing SaaS security",
         "Designed modular architecture with IAM-bound CI/CD pipelines, reducing onboarding time by 65%",
@@ -173,7 +174,7 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Computer Science student @ Georgia Tech with a focus on AI/ML and software security. I'm passionate about
+                Computer Science student @ Georgia Tech with a focus on AI/ML, distributed systems, and software + security engineering. I'm passionate about
                 building intelligent systems that solve real-world problems, from conducting cutting-edge AI research to
                 engineering secure, scalable applications. With experience at industry leaders like Datadog and General
                 Dynamics, I blend academic rigor with practical software engineering to create impactful solutions.
