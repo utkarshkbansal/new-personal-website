@@ -228,7 +228,6 @@ export default function Home() {
                   <div className="space-y-1">
                     <p className="text-xs font-medium">B.S. in Computer Science</p>
                     <p className="text-xs text-muted-foreground">A.I. and Networking Threads</p>
-                    <p className="text-xs text-muted-foreground">Expected Graduation: May 2027</p>
                   </div>
                 </div>
               </div>
@@ -506,7 +505,7 @@ export default function Home() {
           </div>
           <div className="pt-8 border-t border-border">
             <p className="text-muted-foreground">Built with Next.js • Designed for impact</p>
-            <p className="mt-2 text-sm text-muted-foreground">© 2025 Utkarsh K. Bansal. All rights reserved.</p>
+            <p className="mt-2 text-sm text-muted-foreground">© 2026 Utkarsh K. Bansal. All rights reserved.</p>
           </div>
         </div>
       </footer>
